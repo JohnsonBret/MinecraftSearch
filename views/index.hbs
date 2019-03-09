@@ -13,10 +13,13 @@
       <label>search</label>
       <input id="searchBar" oninput="search()" type="text">
 
-      <button onclick="getMinecraftData()">Get  Minecraft DATA!</button>
+      <button id="smallSearchButton" onclick="getMinecraftData()">Get  Minecraft DATA!</button>
     </div>
     </section>
     <div id="root"></div>
+    <div id="bigSearchButton" onclick="getMinecraftData()" >
+     <h2>Click to Load Minecraft Data!</h2> 
+    </div>
     <script src="script.js"></script>
   </body>
 </html>

@@ -3,6 +3,8 @@ var isDataReceived = false;
 
 function getMinecraftData(){
   
+  hideGetDataButtons();
+
   if(isDataReceived === false)
   {
     fetch('items.json')
@@ -23,6 +25,15 @@ function getMinecraftData(){
       createCardsFromData(myJson,"entities");
     });
   }
+}
+
+function hideGetDataButtons()
+{
+  var smallButton = document.getElementById("smallSearchButton");
+  smallButton.setAttribute("style", "display:none;");
+
+  var mainButton = document.getElementById("bigSearchButton");
+  mainButton.setAttribute("style", "display:none;");
 }
 
 function createCardsFromData(data, imgFolder)

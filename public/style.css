@@ -1,6 +1,10 @@
 /* Fonts from Google Fonts - more at https://fonts.google.com */
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
 @import url('https://fonts.googleapis.com/css?family=Poppins');
+@font-face {
+  font-family: Minecrafter;
+  src: url(MinecrafterReg.ttf);
+}
 
 body {
   background-color: white;
@@ -76,6 +80,29 @@ label:hover{
   color: white;
 }
 
+#bigSearchButton{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+}
+
+#bigSearchButton h2{
+  font-family: "Minecrafter", serif;
+  font-size: 4rem;
+  background-color: rgb(54, 168, 48);
+  color: white;
+  transition: background-color 300ms;
+  width: 50%;
+  text-align: center;
+  letter-spacing: 5px;
+  padding: 10px;
+}
+
+#bigSearchButton h2:hover{
+  background-color: rgba(0, 0, 0, 0.5);
+}
 
 
 
@@ -128,6 +155,33 @@ margin: 10px;
   }
   1000% {
     text-shadow: -3px 3px 3px #b1ff00;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  #bigSearchButton{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+  }
+  
+  #bigSearchButton h2{
+    font-family: "Minecrafter", serif;
+    font-size: 3rem;
+    background-color: rgb(54, 168, 48);
+    color: white;
+    transition: background-color 300ms;
+    width: 80%;
+    text-align: center;
+    letter-spacing: 5px;
+    padding: 10px;
+  }
+  
+  #bigSearchButton h2:hover{
+    background-color: rgba(0, 0, 0, 0.5);
+    
   }
 }
 
