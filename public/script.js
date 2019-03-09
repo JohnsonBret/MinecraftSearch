@@ -5,14 +5,6 @@ function getMinecraftData(){
   
   if(isDataReceived === false)
   {
-    fetch('entities.json')
-      .then(function(response) {
-      return response.json();
-    })
-      .then(function(myJson) {
-      isDataReceived = true;
-      createCardsFromData(myJson,"entities");
-    });
     fetch('items.json')
       .then(function(response) {
       return response.json();
@@ -20,6 +12,15 @@ function getMinecraftData(){
       .then(function(myJson) {
       isDataReceived = true;
       createCardsFromData(myJson, "items");
+    });
+
+    fetch('entities.json')
+      .then(function(response) {
+      return response.json();
+    })
+      .then(function(myJson) {
+      isDataReceived = true;
+      createCardsFromData(myJson,"entities");
     });
   }
 }
