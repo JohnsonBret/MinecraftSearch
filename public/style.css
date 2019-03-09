@@ -1,0 +1,186 @@
+/* Fonts from Google Fonts - more at https://fonts.google.com */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+body {
+  background-color: white;
+  font-family: "Poppins", sans-serif;
+  background-image: url("https://minecraft.net/static/theme/freyja/img/bg-grass.799c0e5cd6f4.png");
+  font-size: 18px;
+  margin: 0;
+  color: #444;
+}
+
+
+h1 {
+  font-family: "Poppins", serif;
+  font-size: 32px;
+  text-shadow: -3px -3px 3px #b1ff00;
+  animation: titleText 3s;
+  animation-iteration-count: infinite;
+}
+
+button{
+  font-family: "Poppins", serif;
+  background-color: rgb(54, 168, 48);
+  color: white;
+  transition: background-color 300ms;
+}
+
+button:hover{
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+label{
+  color: white;
+  transition: color 300ms;
+  margin-right:10px;
+}
+
+label:hover{
+  color: rgb(132, 201, 76);
+}
+
+#topBar{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #b3b3b3;
+  background-image: url("https://minecraft.net/static/theme/freyja/img/bg-wool-dark.ddea3e9ef4d4.png");
+}
+#topBar div{
+  display: flex;
+}
+
+
+#searchArea{
+  display: inline;
+}
+
+
+#root{
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 100vw;
+}
+
+#root .card:nth-of-type(2n+1){
+  background-color: rgba(0, 0, 0, 0.6);
+
+  color:white;
+}
+
+#root .card:nth-of-type(2n+0){
+  background-color: #000;
+  background-image: url("https://minecraft.net/static/theme/freyja/img/bg-wool-dark.ddea3e9ef4d4.png");
+  color: white;
+}
+
+
+
+
+
+.card{
+  width: 30%;
+  margin: 5px;
+  background-color: #f1ffcc;
+  transition: transform 150ms, box-shadow 150ms;
+}
+
+.card img{
+  width: 40%;
+  margin: 10px;
+  image-rendering: -webkit-optimize-contrast; 
+  image-rendering: -webkit-crisp-edges; 
+  image-rendering: -moz-crisp-edges; 
+  image-rendering: -o-crisp-edges; 
+  image-rendering: pixelated;
+}
+
+.card:hover{
+  box-shadow: 0px 0px 30px rgb(132, 201, 76);
+  transform: scale(1.01);
+}
+
+.card h2{
+margin: 10px;
+}
+
+.card p{
+  margin: 10px;
+}
+
+
+@keyframes titleText {
+  0% {
+    text-shadow: -3px -3px 3px #b1ff00;
+
+  }
+  25%{
+    text-shadow: 3px -3px 3px #b1ff00;
+  }
+  50%{
+    text-shadow: 3px 3px 3px #b1ff00;
+
+  }
+  75% {
+    text-shadow: -3px 3px 3px #b1ff00;
+  }
+  1000% {
+    text-shadow: -3px 3px 3px #b1ff00;
+  }
+}
+
+
+@media only screen and (max-width: 600px) {
+  #root{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .card h2{
+    margin: 10px;
+    text-align: center;
+  }
+
+  .card p{
+    margin: 10px;
+    text-align: center;
+  }
+  
+  #topBar{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  #topBar div{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 70%
+  }
+  
+  label{
+   margin: 10px;
+    font-size: 20px;
+  }
+  
+  input[type=text]{
+    margin: 10px;
+    width: 80%;
+  }
+  
+  button{
+    margin: 10px;
+    height:40px;
+    width: 80%;
+  }
+}

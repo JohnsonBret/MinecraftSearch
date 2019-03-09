@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Thimble Sample</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <section id="topBar">
+      <img viewbox="0 0 200 200" preserveAspectRatio="xMidYMid meet" src="https://www.vectorlogo.zone/logos/minecraft/minecraft-ar21.svg">
+    <div>
+      <label>search</label>
+      <input id="searchBar" oninput="search()" type="text">
+
+      <button onclick="getMinecraftData()">Get  Minecraft DATA!</button>
+    </div>
+    </section>
+    <div id="root"></div>
+    <script src="script.js"></script>
+  </body>
+</html>
